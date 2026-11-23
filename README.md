@@ -106,13 +106,6 @@ Layout: `src/credit_card_fraud/` has the split and features (`data.py`), the mod
 and the metrics, bootstrap and cost model (`metrics.py`). `scripts/` runs them. `results/` holds every number quoted
 above.
 
-## Resume line
-
-Built a credit-card fraud detector (LightGBM, logistic regression) on 284,807 transactions with 0.17% fraud, evaluated
-on a time-ordered split with bootstrap confidence intervals and a cost model: PR-AUC 0.80 [0.72, 0.89] and fraud
-losses cut from €7.7k to €3.5k in the test period, and showed that SMOTE and undersampling don't help gradient
-boosting on this data.
-
 ## Reference
 
 Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G. (2015). Calibrating probability with undersampling for
