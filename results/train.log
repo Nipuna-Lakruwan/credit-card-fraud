@@ -11,4 +11,4 @@ TEST logreg           (smote) PR-AUC 0.755 CI 0.642-0.863 ROC 0.980 R@P90 0.69 c
 TEST lightgbm         (class_weight) PR-AUC 0.804 CI 0.717-0.886 ROC 0.982 R@P90 0.75 cost {'missed_fraud_eur': 2361.03, 'review_eur': 1145.0, 'total_eur': 3506.03, 'flags': 229, 'caught': 63, 'frauds': 75}
 TEST isolation_forest (none) PR-AUC 0.045 CI 0.032-0.065 ROC 0.949 R@P90 0.00 cost {'missed_fraud_eur': 3422.5699999999997, 'review_eur': 4480.0, 'total_eur': 7902.57, 'flags': 896, 'caught': 43, 'frauds': 75}
 random split LightGBM PR-AUC 0.8295984264459486 0.018577822861085235
-wrote /Volumes/DevDrive/Work/ml-projects-3/credit-card-fraud/results/metrics.json
+wrote results/metrics.json
