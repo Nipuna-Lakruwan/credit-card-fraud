@@ -1,5 +1,7 @@
 # Credit-card fraud detection, evaluated honestly
 
+Trained model: [nipuna02/credit-card-fraud-lightgbm](https://huggingface.co/nipuna02/credit-card-fraud-lightgbm) on Hugging Face.
+
 Fraud is 0.17% of transactions in this dataset. A model that says "never fraud" is 99.8% accurate, so accuracy and
 ROC-AUC say very little here. This project trains fraud detectors on the ULB credit-card dataset and evaluates them
 the way a bank would use them:
@@ -96,6 +98,7 @@ uv run python scripts/download.py   # from OpenML, ~250 MB on disk in data/
 uv run python scripts/train.py      # all experiments, ~3 min on a laptop CPU -> results/metrics.json
 uv run python scripts/compare.py    # paired bootstrap LightGBM vs logistic regression
 uv run python scripts/figures.py    # figures/
+uv run python scripts/export_model.py  # models/ (the files on Hugging Face)
 uv run pytest
 ```
 
