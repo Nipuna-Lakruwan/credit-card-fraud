@@ -1,0 +1,197 @@
+{
+  "split": {
+    "tr": {
+      "rows": 170884,
+      "fraud": 360
+    },
+    "va": {
+      "rows": 56961,
+      "fraud": 57
+    },
+    "te": {
+      "rows": 56962,
+      "fraud": 75
+    }
+  },
+  "validation": {
+    "logreg/none": {
+      "pr_auc_mean": 0.5958660453574688,
+      "pr_auc_sd": 0.0,
+      "seeds": 1,
+      "seconds": 0.2
+    },
+    "logreg/class_weight": {
+      "pr_auc_mean": 0.7569503578872485,
+      "pr_auc_sd": 0.0,
+      "seeds": 1,
+      "seconds": 0.3
+    },
+    "logreg/smote": {
+      "pr_auc_mean": 0.764562940233348,
+      "pr_auc_sd": 0.0003971183779709402,
+      "seeds": 5,
+      "seconds": 4.6
+    },
+    "logreg/undersample": {
+      "pr_auc_mean": 0.6187844643193513,
+      "pr_auc_sd": 0.12955762211164443,
+      "seeds": 5,
+      "seconds": 0.3
+    },
+    "lightgbm/none": {
+      "pr_auc_mean": 0.7788243351330681,
+      "pr_auc_sd": 0.0029600558314545303,
+      "seeds": 5,
+      "seconds": 17.8
+    },
+    "lightgbm/class_weight": {
+      "pr_auc_mean": 0.7877815146871123,
+      "pr_auc_sd": 0.0016949155653887228,
+      "seeds": 5,
+      "seconds": 16.2
+    },
+    "lightgbm/smote": {
+      "pr_auc_mean": 0.7666720607924431,
+      "pr_auc_sd": 0.0022805966806989375,
+      "seeds": 5,
+      "seconds": 29.0
+    },
+    "lightgbm/undersample": {
+      "pr_auc_mean": 0.7686947114388115,
+      "pr_auc_sd": 0.0070949774186284615,
+      "seeds": 5,
+      "seconds": 5.1
+    },
+    "isolation_forest/none": {
+      "pr_auc_mean": 0.02514073327301771
+    }
+  },
+  "test": {
+    "logreg": {
+      "imbalance": "smote",
+      "pr_auc": 0.7549150219372452,
+      "roc_auc": 0.9797697189164483,
+      "recall_at_p90": 0.6933333333333334,
+      "precision_at_r80": 0.6451612903225806,
+      "ci95": {
+        "pr_auc": [
+          0.6424664179820699,
+          0.8626806006799081
+        ],
+        "roc_auc": [
+          0.963861821188718,
+          0.9929775725018414
+        ],
+        "recall_at_p90": [
+          0.5789473684210527,
+          0.8
+        ],
+        "precision_at_r80": [
+          0.08719580455595191,
+          0.9000352112676054
+        ]
+      },
+      "threshold_from_val": 0.999997630972397,
+      "cost_test": {
+        "missed_fraud_eur": 3015.73,
+        "review_eur": 265.0,
+        "total_eur": 3280.73,
+        "flags": 53,
+        "caught": 50,
+        "frauds": 75
+      }
+    },
+    "lightgbm": {
+      "imbalance": "class_weight",
+      "pr_auc": 0.8037174980024828,
+      "roc_auc": 0.9823828525556513,
+      "recall_at_p90": 0.7466666666666667,
+      "precision_at_r80": 0.48,
+      "ci95": {
+        "pr_auc": [
+          0.7167774316512108,
+          0.8863436644828574
+        ],
+        "roc_auc": [
+          0.969404039896498,
+          0.9932713409651587
+        ],
+        "recall_at_p90": [
+          0.6282051282051282,
+          0.8488491557820961
+        ],
+        "precision_at_r80": [
+          0.13512977262977263,
+          0.9827586206896551
+        ]
+      },
+      "threshold_from_val": 0.023054241938428213,
+      "cost_test": {
+        "missed_fraud_eur": 2361.03,
+        "review_eur": 1145.0,
+        "total_eur": 3506.03,
+        "flags": 229,
+        "caught": 63,
+        "frauds": 75
+      }
+    },
+    "isolation_forest": {
+      "imbalance": "none",
+      "pr_auc": 0.04507743612515423,
+      "roc_auc": 0.9492415959123642,
+      "recall_at_p90": 0.0,
+      "precision_at_r80": 0.02673093777388256,
+      "ci95": {
+        "pr_auc": [
+          0.031520357616302834,
+          0.0647574163575233
+        ],
+        "roc_auc": [
+          0.9220897782407421,
+          0.9733338353414134
+        ],
+        "recall_at_p90": [
+          0.0,
+          0.0
+        ],
+        "precision_at_r80": [
+          0.011334923398577147,
+          0.04688902873924899
+        ]
+      },
+      "threshold_from_val": 0.5482914897584891,
+      "cost_test": {
+        "missed_fraud_eur": 3422.5699999999997,
+        "review_eur": 4480.0,
+        "total_eur": 7902.57,
+        "flags": 896,
+        "caught": 43,
+        "frauds": 75
+      }
+    }
+  },
+  "cost_baselines_test": {
+    "flag_nothing": {
+      "missed_fraud_eur": 7729.26,
+      "review_eur": 0.0,
+      "total_eur": 7729.26,
+      "flags": 0,
+      "caught": 0,
+      "frauds": 75
+    },
+    "flag_everything": {
+      "missed_fraud_eur": 0.0,
+      "review_eur": 284810.0,
+      "total_eur": 284810.0,
+      "flags": 56962,
+      "caught": 75,
+      "frauds": 75
+    },
+    "review_cost_eur": 5.0
+  },
+  "random_split_lightgbm": {
+    "pr_auc_mean": 0.8295984264459486,
+    "pr_auc_sd": 0.018577822861085235,
+    "repeats": 5
+  }
+}

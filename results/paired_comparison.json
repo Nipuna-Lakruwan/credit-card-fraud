@@ -1,0 +1,8 @@
+{
+  "lightgbm_minus_logreg_pr_auc": 0.04880247606523758,
+  "ci95": [
+    -0.010740719009631413,
+    0.1238054054532285
+  ],
+  "share_of_resamples_lightgbm_better": 0.901
+}

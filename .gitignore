@@ -1,0 +1,6 @@
+data/
+.venv/
+__pycache__/
+.pytest_cache/
+results/test_scores.npz
+.DS_Store
